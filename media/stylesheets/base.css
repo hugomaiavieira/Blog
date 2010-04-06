@@ -1,0 +1,419 @@
+.clear:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: Verdana;
+    background-color: #3b51ab;
+    margin: auto;
+    margin-bottom: 100px;
+    max-width: 1250px;
+    min-width: 920px;
+    padding: 0 50px;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 2em;
+}
+
+hr {
+    border-width: 0;
+    margin: 10px 0px;
+    border-top: 3px dotted #dddfff;
+}
+
+a:link,
+a:visited {
+    color: #3b51ab;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ef933b;
+}
+
+code {
+    display: block;
+    background-color: #141414;
+    color: #F8F8F8;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px; /* CSS 3 */
+    -moz-border-radius: 6px; /* Para o mozilla */
+    -webkit-border-radius: 6px; /* Paratudofari */
+}
+
+div.principal {
+    padding-top: 1px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom-left-radius: 6px; /* CSS 3 */
+    border-bottom-right-radius: 6px; /* CSS 3 */
+    border-top-right-radius: 4px; /* CSS 3 */
+    -moz-border-radius-bottomleft:6px; /* Para o mozilla */
+    -moz-border-radius-bottomright:6px; /* Para o mozilla */
+    -moz-border-radius-topright:4px; /* Para o mozilla */
+    -webkit-border-bottom-left-radius: 6px; /* Para o Safari e Chromium e Chromium */
+    -webkit-border-bottom-right-radius: 6px; /* Para o Safari e Chromium e Chromium */
+    -webkit-border-top-right-radius: 4px; /* Para o Safari e Chromium */
+}
+
+div.coluna_esquerda {
+    float: left;
+    width: 75%;
+}
+
+div.coluna_direita {
+    float: right;
+    width: 23%;
+    margin: 10px;
+}
+
+div.conteudo {
+    margin: 20px 20px 0 20px;
+    padding-bottom: 50px;
+    text-align: justify;
+}
+
+/* Box */
+
+div.box {
+    padding: 10px;
+    font-weight:bold;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 6px; /* CSS 3 */
+    border-bottom-right-radius: 6px; /* CSS 3 */
+    border-top-left-radius: 6px; /* CSS 3 */
+    border-top-right-radius: 6px; /* CSS 3 */
+    -moz-border-radius-bottomleft:6px; /* Para o mozilla */
+    -moz-border-radius-bottomright:6px; /* Para o mozilla */
+    -moz-border-radius-topleft:6px; /* Para o mozilla */
+    -moz-border-radius-topright:6px; /* Para o mozilla */
+    -webkit-border-bottom-left-radius: 6px; /* Para o Safari e Chromium */
+    -webkit-border-bottom-right-radius: 6px; /* Para o Safari e Chromium */
+    -webkit-border-top-right-radius: 6px; /* Para o Safari e Chromium */
+    -webkit-border-top-left-radius: 6px; /* Para o Safari e Chromium */
+}
+
+div.box h3 {
+    margin: 0px;
+}
+
+div.box a:link,
+div.box a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div.box a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Box Tags */
+
+div.categorias {
+    background-color: #f1943d;
+}
+
+div.categorias h3 {
+    margin-bottom: 5px;
+}
+
+div.categorias p {
+    color: black;
+    margin: 0;
+    padding: 0px 10px;
+    padding-top: 5px;
+    font-size: 1.5em;
+}
+
+div.categorias ul {
+    margin: 0px;
+    padding: 5px 20px;
+    list-style-type: none;
+}
+
+/* Box Busca */
+
+div.busca {
+    background-color: #76c176;
+}
+
+div.busca input[type="submit"] {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+div.busca input[type="text"] {
+    margin-top: 15px;
+}
+
+div.busca div {
+    text-align: center;
+}
+
+/* Box Twitter */
+
+div.twitter {
+    background: #7cc5ff url(/media/imagens/twitter.png) no-repeat scroll 90% 50%;
+    height: 70px;
+    padding-right: 25px;
+}
+
+div.twitter p {
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Box Links */
+
+div.links {
+    background-color: #ff3e3e;
+}
+
+/* Topo */
+
+div.topo {
+    background: white url('/media/imagens/topo.png') no-repeat left top;
+    height: 195px;
+    max-width: 1250px;
+    min-width: 920px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 6px; /* CSS 3 */
+    border-bottom-right-radius: 6px; /* CSS 3 */
+    -moz-border-radius-bottomleft:6px; /* Para o mozilla */
+    -moz-border-radius-bottomright:6px; /* Para o mozilla */
+    -webkit-border-bottom-left-radius: 6px; /* Para o Safari e Chromium e Chromium */
+    -webkit-border-bottom-right-radius: 6px; /* Para o Safari e Chromium e Chromium */
+}
+
+/* Menu */
+
+div.menu {
+    font-weight: bold;
+}
+
+div.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+}
+
+div.menu ul li {
+    float: left;
+    background: url(/media/imagens/menu-direita.png) no-repeat top right;
+    margin-right: 5px;
+    background-color: #ececec;
+}
+
+div.menu ul li a {
+    display: block;
+    padding: 0 1em;
+    line-height: 2em;
+    background: url(/media/imagens/menu-esquerda.png) no-repeat top left;
+    text-decoration: none;
+    color: black;
+    float: left;
+}
+
+div.menu ul li a:hover {
+    color: #649517;
+}
+
+/* Rss */
+
+a.rss{
+	float: right;
+	display: block;
+	width: 159px;
+	height: 31px;
+	padding-bottom: 1px;
+	text-decoration: none;
+	background: url(/media/imagens/rss.png) no-repeat bottom right;
+}
+
+a.rss span {
+	color: white;
+	padding-left: 1em;
+	line-height: 2.1em;
+}
+
+/* Rodape */
+
+div.rodape {
+    color: white;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+div.rodape img {
+    border-width: 0;
+}
+
+div.rodape p{
+    margin: 0px;
+}
+
+/* Artigos  */
+
+div.artigo {
+    margin: 10px 0 10px 0;
+}
+
+div.artigo_conteudo {
+    clear: both;
+    padding: 10px;
+}
+
+div.paginacao {
+    padding: 0 100px;
+}
+
+a.anteriores {
+    float: left;
+}
+
+a.recentes {
+    float: right;
+}
+
+/* Comentarios */
+
+div.comentarios {
+    border-top: 1px solid silver;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+div.comentario {
+    font-size: 0.9em;
+    background-color: #ececec;
+    padding: 1px 15px;
+    border-bottom-left-radius: 8px; /* CSS 3 */
+    border-bottom-right-radius: 8px; /* CSS 3 */
+    border-top-left-radius: 8px; /* CSS 3 */
+    border-top-right-radius: 8px; /* CSS 3 */
+    -moz-border-radius-bottomleft:8px; /* Para o mozilla */
+    -moz-border-radius-bottomright:8px; /* Para o mozilla */
+    -moz-border-radius-topleft:8px; /* Para o mozilla */
+    -moz-border-radius-topright:8px; /* Para o mozilla */
+    -webkit-border-bottom-left-radius: 8px; /* Para o Safari e Chromium */
+    -webkit-border-bottom-right-radius: 8px; /* Para o Safari e Chromium */
+    -webkit-border-top-right-radius: 8px; /* Para o Safari e Chromium */
+    -webkit-border-top-left-radius: 8px; /* Para o Safari e Chromium */
+}
+
+div.comentario span.numero {
+    float: right;
+    color: #7f7f7f;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+div.comentario span.nome {
+    font-weight: bold;
+}
+
+div.comentario span.data {
+    font-size: 0.7em;
+}
+
+div.comentario p.texto {
+    font-size: 0.8em;
+}
+
+/* Outros */
+
+img.minha_foto {
+    margin: 15px 15px 0px 0px;
+    float: left;
+    height: 300px;
+    width: 250px;
+}
+
+/* Formulários */
+
+form label {
+    display: block;
+}
+
+textarea {
+    font-size: 15px;
+    width: 70%;
+}
+
+/* Contato */
+
+div.contato p.sucesso {
+    font-family: verdana,arial,helvetica,sans-serif;;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    background: #DFFFDF url(/media/imagens/sucesso.png) no-repeat scroll 8px 5px;
+    color :#005F00;
+    border: 2px solid #9FCF9F;
+    padding: 3px 3px 3px 30px;
+}
+
+/* Cabeçalho */
+
+div.cabecalho {
+    margin-left: 5px;
+    clear: both;
+}
+
+p.itens_cabecalho {
+    float: left;
+    height: 22px;
+    margin: 5px;
+    color: #3b51ab;
+}
+
+p.itens_cabecalho span {
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+p.tags {
+    background: url(/media/imagens/tags.png) no-repeat 0 0;
+}
+
+p.numero_de_comentarios {
+    background: url(/media/imagens/comentarios.png) no-repeat 0 0;
+}
+
+p.data {
+    background: url(/media/imagens/calendario.png) no-repeat 0 0;
+}
+
+/* Erros */
+
+.errorlist {
+    font-size: 0.7em;
+    color: red;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.error {
+    margin-bottom: 0;
+    color: red;
+}
+

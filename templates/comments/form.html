@@ -1,0 +1,25 @@
+{% load comments i18n %}
+<form action="{% comment_form_target %}" method="post">
+  <input type="hidden" name="next" value="{{ artigo.get_absolute_url }}" />
+  {% for field in form %}
+    {% if field.is_hidden %}
+      {{ field }}
+    {% else %}
+      <p
+        {% if field.errors %} class="error"{% endif %}
+        {% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}
+        >
+        <label for="id_{{ field.html_name }}">
+          {% ifnotequal field.name "url"%}*{% endifnotequal %}{{ field.label }}
+        </label>
+        {% if field.errors %}{{ field.errors }}{% endif %}
+        {{ field }}
+          {% ifequal field.name "email" %}(n&atilde;o ser&aacute; divulgado){% endifequal %}
+      </p>
+    {% endif %}
+  {% endfor %}
+  <p class="submit">
+    <input type="submit" name="post" class="submit-post" value="{% trans "Post" %}" />
+  </p>
+</form>
+

@@ -1,0 +1,27 @@
+<h2>
+  <a href="{{ artigo.get_absolute_url }}">
+  {{ artigo.titulo }}
+  </a>
+</h2>
+<div class="cabecalho">
+  <p class="itens_cabecalho data" >
+    <span>
+      {{ artigo.publicacao|date:"d/m/Y" }} |
+    </span>
+  </p>
+  <p class="itens_cabecalho numero_de_comentarios">
+    <span>
+      {% ifequal numero_de_comentarios 0 %}
+        Nenhum coment&aacute;rio
+      {% else %}
+        <a href="{{ artigo.get_absolute_url }}#comentarios">
+          {{ numero_de_comentarios }} coment&aacute;rio{% ifnotequal numero_de_comentarios 1 %}s{% endifnotequal %}
+        </a>
+      {% endifequal %} |
+    </span>
+  </p>
+  {% with artigo as objeto %}
+    {% include "tags/tags_para_objeto.html" %}
+  {% endwith %}
+</div>
+

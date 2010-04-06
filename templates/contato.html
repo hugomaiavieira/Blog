@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block titulo %}Contato - {{ block.super }}{% endblock %}
+
+{% block conteudo %}
+  <div class="contato">
+    <h1>Contato</h1>
+    {% if aviso %}
+      <p class="sucesso">{{ aviso }}</p>
+    {% endif %}
+
+    <form method="post">
+      {% for field in form %}
+        <p {% if field.errors %} class="error"{% endif %} >
+          <label for="id_{{ field.html_name }}">
+            {% ifnotequal field.name "assunto"%}*{% endifnotequal %}{{ field.label }}
+          </label>
+          {% if field.errors %}{{ field.errors }}{% endif %}
+          {{ field }}
+        </p>
+      {% endfor %}
+      <p>
+        <input type="submit" value="Enviar"/>
+      </p>
+    </form>
+  </div>
+{% endblock conteudo %}
+

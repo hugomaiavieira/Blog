@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load comments %}
+
+{% block titulo %}{{ artigo.titulo }} - {{ block.super }}{% endblock titulo %}
+
+{% block conteudo %}
+  {% get_comment_count for artigo as numero_de_comentarios %}
+  {% include "cabecalho.html" %}
+  <div class="artigo_conteudo">
+    {{ artigo.conteudo|safe|linebreaks }}
+  </div>
+  <div class="comentarios" id="comentarios">
+    <h3>Coment&aacute;rios</h3>
+    {% get_comment_list for artigo as comentarios %}
+    {% if not comentarios %}<p>Nenhum coment&aacute;rio.</p>{% endif %}
+    {% for comentario in comentarios %}
+      <div class="comentario">
+        <p>
+          <span class="nome">{{ comentario.name }}</span>
+          <span class="numero">#{{ forloop.counter }}</span><br/>
+          <span class="data">{{ comentario.submit_date|date:"d \de F \de Y - G:i" }}</span>
+        </p>
+        <p class="texto">{{ comentario.comment|safe|linebreaks }}</p>
+      </div>
+      <hr />
+    {% endfor %}
+    <h3>Envie um coment&aacute;rio</h3>
+    {% render_comment_form for artigo %}
+  </div>
+{% endblock conteudo %}
+

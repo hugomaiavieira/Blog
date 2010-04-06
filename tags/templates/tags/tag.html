@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load comments %}
+
+{% block titulo %}Categoria "{{ tag.nome }}" - {{ block.super }}{% endblock %}
+
+{% block conteudo %}
+  {% for item in tag.tagitem_set.all %}
+    {% with item.objeto as artigo %}
+      {% get_comment_count for artigo as numero_de_comentarios %}
+      <div class="artigo">
+        {% include "cabecalho.html" %}
+        <div class="artigo_conteudo">
+          <p>{{ artigo.conteudo|safe|linebreaks }}</p>
+        </div>
+      </div>
+      <hr />
+    {% endwith %}
+  {% endfor %}
+{% endblock conteudo %}
+

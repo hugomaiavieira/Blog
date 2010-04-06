@@ -1,0 +1,9 @@
+<div class="box categorias">
+  <h3>Categorias</h3>
+  <ul>
+    {% for tag in tags %}
+    <li><a href="{{ tag.get_absolute_url }}">{{ tag }}</a> ({{ tag.tagitem_set.count }})</li>
+    {% endfor %}
+  </ul>
+</div>
+

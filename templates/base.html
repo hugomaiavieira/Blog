@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+  <head>
+    <title>{% block titulo %}Blog do Hugo Maia Vieira{% endblock %}</title>
+    {% block meta %}
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+      <meta http-equiv="Content-Language" content="pt-br"/>
+      <meta name="keywords"
+            content="Hugo, Maia, Vieira, blog, Python, Django, Rails, Ruby,
+              Shell, Desenvolvimento, Software livre, " />
+      <meta name="description" content="Blog de Hugo Maia Vieira que se
+        concentra na &aacute;rea de desenvolvimento e software livre." />
+    {% endblock meta %}
+
+    {% block feeds %}
+      <link rel="alternate" type="application/rss+xml"
+      title="Blog do Hugo Maia Vieira" href="/blog/rss/"/>
+    {% endblock feeds %}
+
+    {% block style %}
+      <link rel="stylesheet" type="text/css"
+        href="{{ MEDIA_URL }}stylesheets/base.css"/>
+    {% endblock style %}
+
+    {% block scripts %}
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("UA-15653302-1");
+          pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
+    {% endblock scripts %}
+  </head>
+
+  <body>
+      <h1 style="display: none;">Blog do Hugo Maia Vieira</h1>
+      <div class="topo"></div>
+
+      {% include "menu.html" %}
+
+      <div class="principal clear">
+        <div class="coluna_esquerda">
+
+
+          <div class="conteudo">
+            {% block h1 %}{% endblock h1 %}
+            {% block conteudo %}{% endblock conteudo %}
+          </div>
+
+        </div>
+
+        <div class="coluna_direita">
+          {% include "busca.html" %}
+          {% include "twitter.html" %}
+          {% include "categorias.html" %}
+          {% include "links.html" %}
+        </div>
+
+      </div>
+
+      {% include "rodape.html" %}
+  </body>
+</html>
+

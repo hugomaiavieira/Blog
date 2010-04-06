@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load comments %}
+
+{% block conteudo %}
+  {% for artigo in object_list %}
+    {% get_comment_count for artigo as numero_de_comentarios %}
+    <div class="artigo">
+      {% include "cabecalho.html" %}
+      <div class="artigo_conteudo">
+        <p>{{ artigo.conteudo|safe|linebreaks }}</p>
+      </div>
+    </div>
+    <hr />
+  {% endfor %}
+  <div class="paginacao">
+    {% if page_obj.has_previous %}
+      <a class="recentes" href="?page={{ page_obj.previous_page_number }}">
+        Posts recentes &raquo;
+      </a>
+    {% endif%}
+    {% if page_obj.has_next %}
+      <a class="anteriores" href="?page={{ page_obj.next_page_number }}">
+        &laquo; Posts anteriores
+      </a>
+    {% endif%}
+  </div>
+{% endblock %}
+

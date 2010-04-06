@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %}Sobre mim - {{ block.super }}{% endblock titulo %}
+
+{% block h1 %}<h1>Sobre mim</h1>{% endblock h1%}
+
+{% block conteudo %}
+  <img class="minha_foto" src="{{ MEDIA_URL }}/imagens/eu.jpg"
+    alt="Foto do Hugo" height="300" width="250" />
+  <p>
+    Meu nome completo &eacute; Hugo Henriques Maia Vieira. Sou estudante do curso de
+    Ci&ecirc;ncia da Computa&ccedil;&atilde;o e Inform&aacute;tica da UENF. Sou tamb&eacute;m um entusiasta do
+    software livre e a finalidade deste blog &eacute; exatamente tentar contribuir um
+    pouco com a comunidade.
+  </p>
+  <p>
+    Estudo e estou come&ccedil;ando a desenvolver em python, django, ruby on rails e
+    shell script. Sendo assim, estes devem ser os assuntos mais abordados no
+    blog, al&eacute;m de outros como dicas para o linux, desenvolvimento &aacute;gil e git,
+    dentre outros.
+  </p>
+  <p>
+    Espero poder retribuir um pouco &agrave; comunidade pelo tanto que ela me
+    proporciona.
+  <p>
+  <address>
+    Github: <strong><a href="http://github.com/hugomaia">github.com/hugomaia</a></strong><br/>
+    Twitter: <strong><a href="http://www.twitter.com/hugomaiavieira">@hugomaiavieira</a></strong>
+  </address>
+{% endblock conteudo %}
+
