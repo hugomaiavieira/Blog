@@ -35,6 +35,12 @@ urlpatterns = patterns('',
 
     (r'^contato/$', 'views.contato'),
 
+    (r'^robots.txt$', 'django.views.static.serve',
+     { 'path' : "/robots.txt",
+       'document_root': settings.MEDIA_ROOT,
+       'show_indexes': False } ),
+
+
     (r'^media/(.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
 
