@@ -256,18 +256,31 @@ a.rss span {
 /* Rodape */
 
 div.rodape {
+    clear: both;
     color: white;
     font-size: 0.7em;
-    text-align: center;
+    padding: 0 20px
+}
+
+div.rodape a {
+    color: white;
+    text-decoration: underline;
 }
 
 div.rodape img {
-    border-width: 0;
+    vertical-align: middle;
 }
 
-div.rodape p{
-    margin: 0px;
+div.rodape #django,
+div.rodape #smallacts {
+  float: right;
+  padding-left: 5px;
+  border: none;
 }
+
+/*div.rodape p{*/
+/*    margin: 0px;*/
+/*}*/
 
 /* Artigos  */
 
