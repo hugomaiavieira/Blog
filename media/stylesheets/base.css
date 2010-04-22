@@ -300,6 +300,10 @@ div.artigo_conteudo {
     padding: 10px;
 }
 
+div.artigo_conteudo h3{
+    margin-bottom: 0px;
+}
+
 div.paginacao {
     padding: 0 100px;
 }
