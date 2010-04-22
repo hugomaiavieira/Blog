@@ -11,7 +11,7 @@ from tags.models import Tag
 blog_dict = {
     'queryset': Artigo.objects.all(),
     'paginate_by': 10,
-    'extra_context': {'tags': Tag.objects.all().order_by("nome")}
+    'extra_context': {'tags': Tag.objects.all().order_by("nome"), 'artigos': Artigo.objects.all()}
 }
 
 urlpatterns = patterns('',

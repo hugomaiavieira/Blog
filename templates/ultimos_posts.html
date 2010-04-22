@@ -1,0 +1,13 @@
+<div class="box ultimos_posts">
+  <h3>Últimos posts</h3>
+  <ul>
+  {% for artigo in artigos|slice:":10" %}
+    <li>
+      <a href="{{ artigo.get_absolute_url }}" alt="{{ artigo.titulo }}">
+        {{ artigo.titulo }}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+

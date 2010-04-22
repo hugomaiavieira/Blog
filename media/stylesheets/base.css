@@ -185,6 +185,13 @@ div.links {
     background-color: #ff3e3e;
 }
 
+/* Box Ultimos Posts */
+
+div.ultimos_posts {
+    background-color: #769cc1;
+}
+
+
 /* Topo */
 
 div.topo {

@@ -4,6 +4,7 @@ from django import forms
 from django.core.mail import send_mail
 
 from tags.models import Tag
+from blog.models import Artigo
 
 class FormContato(forms.Form):
     nome = forms.CharField(max_length=50, required=True)
@@ -34,6 +35,7 @@ Mensagem:
 
 def contato(request):
     tags = Tag.objects.all().order_by("nome")
+    artigos = Artigo.objects.all()
 
     if request.method == 'POST':
         form = FormContato(request.POST)
