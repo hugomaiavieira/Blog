@@ -5,7 +5,7 @@
 {% block titulo %}Categoria "{{ tag.nome }}" - {{ block.super }}{% endblock %}
 
 {% block conteudo %}
-  {% for item in tag.tagitem_set.all %}
+  {% for item in tag.tagitem_set.all reversed %}
     {% with item.objeto as artigo %}
       {% get_comment_count for artigo as numero_de_comentarios %}
       <div class="artigo">
