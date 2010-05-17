@@ -17,7 +17,11 @@
     {% for comentario in comentarios %}
       <div class="comentario">
         <p>
-          <span class="nome">{{ comentario.name }}</span>
+          {% if comentario.url %}
+            <span class="nome"><a href="{{ comentario.url}}">{{ comentario.name }}</a></span>
+          {% else %}
+            <span class="nome">{{ comentario.name }}</span>
+          {% endif %}
           <span class="numero">#{{ forloop.counter }}</span><br/>
           <span class="data">{{ comentario.submit_date|date:"d \de F \de Y - G:i" }}</span>
         </p>
